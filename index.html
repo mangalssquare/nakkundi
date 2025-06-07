@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mangals Square - Bangalore Homes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #e74c3c;
+      --accent-color: #3498db;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, var(--secondary-color), #c0392b);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .card h5 {
+      color: var(--primary-color);
+      font-weight: bold;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card ul {
+      padding-left: 1.2rem;
+    }
+
+    .card ul li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .card ul li:before {
+      content: "•";
+      color: var(--accent-color);
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .carousel-container {
+      margin: 3rem auto;
+      max-width: 1200px;
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .carousel img {
+      height: 660px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(44, 62, 80, 0.8);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.9;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-control-prev {
+      left: 30px;
+    }
+
+    .carousel-control-next {
+      right: 30px;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+      opacity: 1;
+      background-color: var(--primary-color);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 0 8px;
+      background-color: rgba(255,255,255,0.5);
+      border: none;
+    }
+
+    .carousel-indicators .active {
+      background-color: white;
+    }
+
+    .carousel-caption {
+      background-color: rgba(44, 62, 80, 0.8);
+      border-radius: 8px;
+      padding: 15px 25px;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-width: 800px;
+    }
+
+    .carousel-caption h5 {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .carousel-caption p {
+      color: #ecf0f1;
+      font-size: 1.1rem;
+    }
+
+    .btn-outline-primary {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+      transition: all 0.3s ease;
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: var(--accent-color);
+      color: white;
+    }
+
+    .contact-card a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-icon {
+      margin-right: 8px;
+      color: var(--accent-color);
+    }
+
+    @media (max-width: 768px) {
+      .carousel img {
+        height: 400px;
+      }
+
+      .hero-banner {
+        font-size: 1.2rem;
+        padding: 1rem;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 40px;
+        height: 40px;
+      }
+
+      .carousel-caption {
+        width: 90%;
+        padding: 10px 15px;
+      }
+
+      .carousel-caption h5 {
+        font-size: 1.2rem;
+      }
+
+      .carousel-caption p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero-banner">
+  Spacious 2 BHK home for rent by owner – Doddanekundi, Bagmane Park EMC2, Marathahalli
+</div>
+
+<div class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card p-3 shadow-sm h-100">
+        <h5><i class="fas fa-road contact-icon"></i> Pragathi layout</h5>
+        <ul>
+          <li>Bagmane Techno Park EMC2 - 350 mtrs</li>
+          <li>Outer ring road - 300 mtrs</li>
+          <li>EMC2 - 400 mtrs</li>
+          <li>Google  - 800 mtrs</li>
+          <li>Marathahalli  - 2 KM</li>
+          <li>Mahadevapura  - 2 KM</li>
+          <li>ITPL  - 6 KM</li>
+          <li>Intel  - 4.5 KM</li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="card p-3 shadow-sm h-100">
+        <h5><i class="fas fa-tree contact-icon"></i> Enjoy the nature with greenery</h5>
+        <ul>
+          <li>Coconut trees on the road and layout</li>
+          <li>Spacious rooms (13 ft × 11 ft)</li>
+          <li>2 BHK Ground and Second Floor</li>
+          <li>2 Dedicated Car Parking</li>
+          <li>30 Feet wide front tarred road</li>
+          <li>Manipal hospital - 5 KM</li>
+          <li>Dmart 5 KM</li>
+          <li>KIMs Hospital 350 mtrs</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card p-3 shadow-sm h-100 contact-card">
+        <h5><i class="fas fa-address-card contact-icon"></i> Contact Us</h5>
+        <p>
+          <strong>Joby Poulose</strong><br>
+          <i class="fas fa-phone contact-icon"></i> 94480 30162<br>
+          <i class="fas fa-envelope contact-icon"></i> <a href="mailto:mpjoby@gmail.com">mpjoby@gmail.com</a>
+          <br><br>
+          <i class="fas fa-map-marker-alt contact-icon"></i> #20, 21st B Cross, Pragathi Layout<br>
+          Doddanekundi P.O - 560 037, Bengaluru, Karnataka, India.
+
+          <a href="https://maps.app.goo.gl/xqzsJ7uS5YyipWTG6" class="btn btn-outline-primary btn-sm">
+            <i class="fas fa-map-marked-alt"></i> Google Maps #20, Pragthi Layout
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Centered Carousel -->
+  <div class="carousel-container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11" aria-label="Slide 12"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="12" aria-label="Slide 13"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="001.JPG" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="002.JPG" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="003.jpg" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="004.jpg" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="005.jpg" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="006.JPG" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="007.JPG" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="008.JPG" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="009.JPG" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="010.JPG" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="011.JPG" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="012.JPG" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="013.jpg" class="d-block w-100" alt="Granite Flooring">
+          <div class="carousel-caption">
+            <h5>Granite Flooring</h5>
+            <p>Well built</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Mangals Square. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>
